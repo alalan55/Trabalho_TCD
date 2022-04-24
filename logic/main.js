@@ -21,7 +21,6 @@ if (window.Worker) {
             }
         },
         methods: {
-
             somarDadosThread() {
                 if (this.state < this.dados.length) {
 
@@ -31,14 +30,10 @@ if (window.Worker) {
                     worker.onmessage = (result) => {
                         this.total = result.data
                     }
-
                     this.state++
-
                 }
-
             }
         }
     }
     Vue.createApp(App).mount('#container')
-
 }

@@ -9,7 +9,5 @@ onmessage = function (data) {
         result = data.data.somaAtual
         result += data.data.numeroAtual
     }
-
-
     self.postMessage(result)
 }

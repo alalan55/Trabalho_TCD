@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
-    <title>Trabalho de therads</title>
+    <title>Trabalho de therads - TCD</title>
 </head>
+
 <body>
     <div id="container">
         <div class="title">
-            <h1>Trabalho sobre thread</h1>
-           
+            <h1>Trabalho sobre thread - TCD</h1>
+
         </div>
         <div class="description">
             <span>
-                total somado via thread <br>
+                Vetor de dados utilizado:
+                <strong>{{dados}} </strong>
+            </span>
+        </div>
+        <div class="description">
+            <span>
+                Total somado via thread:
                 <strong>{{total}} </strong>
-             </span>
+            </span>
+        </div>
+
+        <div class="explain">
+            <span>
+                Olhe o console, pois lá está informando quando a thread é criada e qual valor ela ta recebendo! 😄
+            </span>
         </div>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
     <script src="./logic/main.js"></script>
 </body>
+
 </html>
