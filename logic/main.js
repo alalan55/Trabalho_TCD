@@ -2,7 +2,7 @@
 if (window.Worker) {
     const App = {
         created() {
-            console.log('Matriz de dados com contem os valores:', this.dados)
+            console.log('Matriz de dados com os valores:', this.dados)
             this.somarDadosThread()
         },
         data() {
