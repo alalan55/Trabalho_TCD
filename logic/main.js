@@ -2,12 +2,12 @@
 if (window.Worker) {
     const App = {
         created() {
-            console.log('Matriz de dados com os valores:', this.dados)
             this.somarDadosThread()
         },
         data() {
             return {
                 dados: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                msgsThreads: [],
                 total: 0,
                 state: 0,
                 dadosParaThread: {}
@@ -28,7 +28,8 @@ if (window.Worker) {
                     const worker = new Worker("/logic/thread.js");
                     worker.postMessage(JSON.parse(JSON.stringify(this.dadosParaThread)))
                     worker.onmessage = (result) => {
-                        this.total = result.data
+                        this.total = result.data.result
+                        this.msgsThreads.push(result.data)
                     }
                     this.state++
                 }

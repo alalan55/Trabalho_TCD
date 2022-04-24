@@ -28,10 +28,31 @@
             </span>
         </div>
 
-        <div class="explain">
+        <!-- <div class="explain">
             <span>
                 Olhe o console, pois lá está informando quando a thread é criada e qual valor ela ta recebendo! 😄
             </span>
+        </div> -->
+
+        <div class="datas-in-threads" v-if="msgsThreads">
+            <ul>
+                <li v-for="(value, idx) in msgsThreads" :key="idx">
+                    <div class="message-1">
+                        <span>
+                            {{value.msg1}}
+                        </span>
+                        <span>
+                            {{value.line}}
+                        </span>
+                        <span>
+                            {{value.msg2}}
+                        </span>
+                        <span class="total">
+                            {{value.result}}
+                        </span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 

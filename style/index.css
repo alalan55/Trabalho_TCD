@@ -8,7 +8,7 @@
 }
 
 #container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -36,4 +36,32 @@
 }
 .explain span{
     font-size: .8em;
+}
+
+.datas-in-threads{
+    /* border: 1px solid red; */
+    /* hei */
+    max-width: 1000px;
+}
+.datas-in-threads ul{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.datas-in-threads ul li{
+    list-style: none;
+    border: 1px solid;
+    margin: .5rem 0;
+    padding: .8rem;
+    flex:  1 1 200px;
+    border-radius: 10px;
+}
+.datas-in-threads ul li span{
+    display: block;
+    margin: 0 0 1rem 0;
+}
+.datas-in-threads ul li .total{
+    font-weight: 700;
+    margin: 1.5rem 0 .5rem;
 }
